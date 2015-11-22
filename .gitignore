@@ -1,0 +1,51 @@
+using System;
+
+
+    class CurrencyCheck
+    {
+        static void Main(string[] args)
+        {
+        int r = int.Parse(Console.ReadLine());
+        int d = int.Parse(Console.ReadLine());
+        int e = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+        int m = int.Parse(Console.ReadLine());
+
+        double rl = ((double)r / 100) * (double)3.5;
+        double dl = d * (double)1.5;
+        double el = e * (double)1.95;
+        double bl = (double)b / 2;
+        double ml = m;
+        double cheapest;
+        double cheapest1;
+        double cheapest2;
+
+        //if (rl < dl)
+        //{
+        //    cheapest = rl;
+        //}
+        //else
+        //{
+        //   cheapest = dl;
+        //}
+        //if (cheapest > el)
+        //{
+        //    cheapest = el;
+        //}
+        //if (cheapest > bl)
+        //{
+        //    cheapest = bl;
+        //}
+        //if (cheapest > ml)
+        //{
+        //    cheapest = ml;
+        //}
+        cheapest = Math.Min(rl, dl);
+        cheapest1 = Math.Min(el, bl);
+        cheapest2 = Math.Min(cheapest, cheapest1);
+        cheapest = Math.Min(cheapest2, ml);
+        
+        Console.WriteLine("{0:F2}", cheapest);
+    }
+    }
+
